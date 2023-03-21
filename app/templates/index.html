@@ -1,0 +1,21 @@
+
+{% extends 'base.html' %}
+
+{% block content %}
+
+  <h1>{{ f }}</h1>
+<div class="container">
+  <div class="row">
+    {% for a in artists %}
+    <div class="col-6">
+      <p>{{  a.name  }}</p>
+      <h6>{{ a['spec'] }}</h6>
+      <h6>{{ a.age }}</h6>
+
+    </div>
+    {% endfor %}
+    
+  </div>
+</div>
+
+{% endblock %}
